@@ -248,14 +248,14 @@ if "__main__" == __name__:
         variant = None
 
     unet         = UNet2DConditionModel.from_pretrained(checkpoint_path, subfolder="unet")   
-    vae          = AutoencoderKL.from_pretrained("/red/ruogu.fang/old_users/shanlinsun/data/rgbx_model/rgb-to-x", subfolder="vae")  
-    text_encoder = CLIPTextModel.from_pretrained("/red/ruogu.fang/old_users/shanlinsun/data/rgbx_model/rgb-to-x", subfolder="text_encoder")  
-    tokenizer    = CLIPTokenizer.from_pretrained("/red/ruogu.fang/old_users/shanlinsun/data/rgbx_model/rgb-to-x", subfolder="tokenizer") 
-    scheduler    = DDIMScheduler.from_pretrained("/red/ruogu.fang/old_users/shanlinsun/data/rgbx_model/rgb-to-x", timestep_spacing=timestep_spacing, subfolder="scheduler") 
+    vae          = AutoencoderKL.from_pretrained("zheng95z/rgb-to-x", subfolder="vae")  
+    text_encoder = CLIPTextModel.from_pretrained("zheng95z/rgb-to-x", subfolder="text_encoder")  
+    tokenizer    = CLIPTokenizer.from_pretrained("zheng95z/rgb-to-x", subfolder="tokenizer") 
+    scheduler    = DDIMScheduler.from_pretrained("zheng95z/rgb-to-x", timestep_spacing=timestep_spacing, subfolder="scheduler") 
 
     current_directory = os.path.dirname(os.path.abspath(__file__))
     pipe = StableDiffusionAOVMatEstPipeline.from_pretrained(
-        "/red/ruogu.fang/old_users/shanlinsun/data/rgbx_model/rgb-to-x",
+        checkpoint_path,
         unet=unet, 
         vae=vae, 
         scheduler=scheduler, 
