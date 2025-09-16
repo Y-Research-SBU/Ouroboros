@@ -247,7 +247,7 @@ if "__main__" == __name__:
         dtype = torch.float32
         variant = None
 
-    unet         = UNet2DConditionModel.from_pretrained(checkpoint_path, subfolder="unet")   
+    unet         = UNet2DConditionModel.from_pretrained(checkpoint_path, subfolder="unet_1")   
     vae          = AutoencoderKL.from_pretrained("zheng95z/rgb-to-x", subfolder="vae")  
     text_encoder = CLIPTextModel.from_pretrained("zheng95z/rgb-to-x", subfolder="text_encoder")  
     tokenizer    = CLIPTokenizer.from_pretrained("zheng95z/rgb-to-x", subfolder="tokenizer") 
