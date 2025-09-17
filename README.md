@@ -6,7 +6,7 @@
 
 > **Ouroboros: Single-step Diffusion Models for Cycle-consistent Forward and Inverse Rendering**
 > 
-> [Shanlin Sun]([https://siwensun.github.io/]), [Yifan Wang](https://yfwang.me/), [Hanwen Zhang](https://github.com/zhw123456789/), [Yifeng Xiong](https://yuukino22.github.io/), [Qin Ren](https://scholar.google.com/citations?user=Tcg-9DcAAAAJ&hl=zh-CN), [Ruogu Fang](https://lab-smile.github.io/), [Xiaohui Xie]([https://ics.uci.edu/~xhx/]) and [Chenyu You]([https://chenyuyou.me/])
+> [Shanlin Sun](https://siwensun.github.io/), [Yifan Wang](https://yfwang.me/), [Hanwen Zhang](https://github.com/zhw123456789/), [Yifeng Xiong](https://yuukino22.github.io/), [Qin Ren](https://scholar.google.com/citations?user=Tcg-9DcAAAAJ&hl=zh-CN), [Ruogu Fang](https://lab-smile.github.io/), [Xiaohui Xie](https://ics.uci.edu/~xhx/) and [Chenyu You](https://chenyuyou.me/)
 > 
 > - **Institutions**: University of California, Irvine; Stony Brook University; Huazhong University of Science and Technology; University of Florida 
 > - **Contact**: [Shanlin Sun](https://siwensun.github.io/) (shanlins@uci.edu)
