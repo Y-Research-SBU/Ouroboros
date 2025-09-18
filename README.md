@@ -1,16 +1,60 @@
 
-# Ouroboros: Single-step Diffusion Models for Cycle-consistent Forward and Inverse Rendering
+<div align="center">
 
-[![Project Page](https://img.shields.io/badge/Project-Page-Green)](https://siwensun.github.io/ouroboros-project/)
-[![arXiv](https://img.shields.io/badge/arXiv-2508.14461-b31b1b.svg)](https://arxiv.org/abs/2508.14461)
+<table>
+<tr>
+<td><img src="./img/logo.png" height="100" style="object-fit: contain;"></td>
+<td>
+  <h2>Ouroboros: Single-step Diffusion Models for Cycle-consistent Forward and Inverse Rendering</h2>
+</td>
+</tr>
+</table>
 
-> **Ouroboros: Single-step Diffusion Models for Cycle-consistent Forward and Inverse Rendering**
-> 
-> [Shanlin Sun](https://siwensun.github.io/), [Yifan Wang](https://yfwang.me/), [Hanwen Zhang](https://github.com/zhw123456789/), [Yifeng Xiong](https://yuukino22.github.io/), [Qin Ren](https://scholar.google.com/citations?user=Tcg-9DcAAAAJ&hl=zh-CN), [Ruogu Fang](https://lab-smile.github.io/), [Xiaohui Xie](https://ics.uci.edu/~xhx/) and [Chenyu You](https://chenyuyou.me/)
-> 
-> - **Institutions**: University of California, Irvine; Stony Brook University; Huazhong University of Science and Technology; University of Florida 
-> - **Contact**: [Shanlin Sun](https://siwensun.github.io/) (shanlins@uci.edu)
 
+<p>
+  <a href="https://siwensun.github.io/">Shanlin Sun</a><sup>1 ★</sup>&nbsp;
+  <a href="https://yfwang.me/">Yifan Wang</a><sup>2</sup>&nbsp;
+  <a href="https://github.com/zhw123456789/">Hanwen Zhang</a><sup>3</sup>&nbsp;
+  <a href="https://yuukino22.github.io/">Yifeng Xiong</a><sup>1</sup>&nbsp;
+  <a href="https://scholar.google.com/citations?user=Tcg-9DcAAAAJ&hl=zh-CN">Qin Ren</a><sup>2</sup>&nbsp;
+  <a href="https://lab-smile.github.io/">Ruogu Fang</a><sup>4</sup>&nbsp;
+  <a href="https://ics.uci.edu/~xhx/">Xiaohui Xie</a><sup>1</sup>&nbsp;
+  <a href="https://chenyuyou.me/">Chenyu You</a><sup>2</sup>
+</p>
+
+<p>
+  <sup>1</sup> University of California, Irvine &nbsp;&nbsp; 
+  <sup>2</sup> Stony Brook University &nbsp;&nbsp; 
+  <sup>3</sup> Huazhong University of Science and Technology &nbsp;&nbsp; 
+  <sup>4</sup> University of Florida &nbsp;&nbsp; 
+  <sup>★</sup> Contact Author <br>
+</p>
+
+<p align="center">
+  <a href="https://arxiv.org/abs/2508.14461">
+    <img src="https://img.shields.io/badge/ArXiv-2508.14461-b31b1b.svg?style=flat-square&logo=arxiv" alt="Paper">
+  </a>
+  <a href="https://siwensun.github.io/ouroboros-project/">
+    <img src="https://img.shields.io/badge/Project-Website-green?style=flat-square&logo=googlechrome" alt="Project Website">
+  </a>
+  <br>
+  <a href="#">
+    <img src="https://img.shields.io/badge/Contact-shanlins%40uci.edu-orange?style=flat-square&logo=gmail" alt="Contact">
+  </a>
+</p>
+
+</div>
+
+# Abstract
+While multi-step diffusion models have advanced both forward and inverse rendering, existing approaches often treat these problems independently, leading to cycle inconsistency and slow inference speed. In this work, we present **Ouroboros**, a framework composed of two single-step diffusion models that handle forward and inverse rendering with mutual reinforcement. Our approach extends intrinsic decomposition to both indoor and outdoor scenes and introduces a cycle consistency mechanism that ensures coherence between forward and inverse rendering outputs. Experimental results demonstrate state-of-the-art performance across diverse scenes while achieving substantially faster inference speed compared to other diffusion-based methods. We also demonstrate that Ouroboros can transfer to video decomposition in a training-free manner, reducing temporal inconsistency in video sequences while maintaining high-quality per-frame inverse rendering.
+<p align="center">
+  <img src="./img/teaser.png" width="100%">
+</p>
+
+**Figure:** **Single-step Diffusion Models for Forward and Inverse Rendering in Cycle Consistency**.  
+**Left Upper:** Ouroboros decomposes input images into intrinsic maps (albedo, normal, roughness, metallicity, and irradiance). Given these generated intrinsic maps and textual prompts, our neural forward rendering model synthesizes images closely matching the originals.  
+**Right Upper:** We extend an end-to-end finetuning technique to diffusion-based neural rendering, outperforming state-of-the-art RGB↔X in both speed and accuracy. The radar plot illustrates numerical comparisons on the InteriorVerse dataset.  
+**Bottom:** Our method achieves temporally consistent video inverse rendering without specific finetuning on video data.
 ## TODO List
 
 - \[x] Release inference codes and checkpoints.
