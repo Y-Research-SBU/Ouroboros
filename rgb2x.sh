@@ -6,5 +6,5 @@ python rgb2x/inference.py \
     --condition "rgb" \
     --noise "gaussian" \
     --seed 0 \
-    --input_rgb_path="/red/ruogu.fang/hanwen/Ouroboros/demo/demo1/RGB.png" \
-    --output_dir="/red/ruogu.fang/hanwen/Ouroboros/output" 
+    --input_rgb_path="./demo/demo1/RGB.png" \
+    --output_dir="./output" 
