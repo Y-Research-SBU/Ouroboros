@@ -7,9 +7,9 @@ python x2rgb/inference.py \
     --noise "gaussian" \
     --seed 0 \
     --prompt="a bed with a white comforter" \
-    --albedo_path="/red/ruogu.fang/hanwen/Ouroboros/demo/demo1/Albedo.png" \
-    --normal_path="/red/ruogu.fang/hanwen/Ouroboros/demo/demo1/Normal.png" \
-    --roughness_path="/red/ruogu.fang/hanwen/Ouroboros/demo/demo1/Roughness.png" \
-    --metallic_path="/red/ruogu.fang/hanwen/Ouroboros/demo/demo1/Metallic.png" \
-    --irradiance_path="/red/ruogu.fang/hanwen/Ouroboros/demo/demo1/Irradiance.png" \
-    --output_dir="/red/ruogu.fang/hanwen/Ouroboros/output"
+    --albedo_path="./demo/demo1/Albedo.png" \
+    --normal_path="./demo/demo1/Normal.png" \
+    --roughness_path="./demo/demo1/Roughness.png" \
+    --metallic_path="./demo/demo1/Metallic.png" \
+    --irradiance_path="./demo/demo1/Irradiance.png" \
+    --output_dir="./output"
