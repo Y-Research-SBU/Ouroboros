@@ -25,7 +25,7 @@
 <p>
   <sup>1</sup> University of California, Irvine &nbsp;&nbsp; 
   <sup>2</sup> Stony Brook University &nbsp;&nbsp; 
-  <sup>3</sup> Huazhong University of Science and Technology &nbsp;&nbsp; 
+  <sup>3</sup> Huazhong University of Science and Technology &nbsp;&nbsp; <br>
   <sup>4</sup> University of Florida &nbsp;&nbsp; 
   <sup>★</sup> Contact Author <br>
 </p>
