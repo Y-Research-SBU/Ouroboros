@@ -15,7 +15,7 @@
   <a href="https://siwensun.github.io/">Shanlin Sun</a><sup>1 ★</sup>&nbsp;
   <a href="https://yfwang.me/">Yifan Wang</a><sup>2</sup>&nbsp;
   <a href="https://github.com/zhw123456789/">Hanwen Zhang</a><sup>3</sup>&nbsp;
-  <a href="https://yuukino22.github.io/">Yifeng Xiong</a><sup>1</sup>&nbsp; <br>
+  <a href="https://yuukino22.github.io/">Yifeng Xiong</a><sup>1</sup>&nbsp;
   <a href="https://scholar.google.com/citations?user=Tcg-9DcAAAAJ&hl=zh-CN">Qin Ren</a><sup>2</sup>&nbsp;
   <a href="https://lab-smile.github.io/">Ruogu Fang</a><sup>4</sup>&nbsp;
   <a href="https://ics.uci.edu/~xhx/">Xiaohui Xie</a><sup>1</sup>&nbsp;
