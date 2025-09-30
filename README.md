@@ -32,14 +32,14 @@
 
 <p align="center">
   <a href="https://arxiv.org/abs/2508.14461">
-    <img src="https://img.shields.io/badge/ArXiv-2508.14461-b31b1b.svg?style=flat-square&logo=arxiv" alt="Paper">
+    <img src="https://img.shields.io/badge/ArXiv-2508.14461-b31b1b?style=flat-square&logo=arxiv&labelColor=000000&logoColor=FFFFFF" alt="Paper">
   </a>
   <a href="https://siwensun.github.io/ouroboros-project/">
-    <img src="https://img.shields.io/badge/Project-Website-green?style=flat-square&logo=googlechrome" alt="Project Website">
+    <img src="https://img.shields.io/badge/Project-Website-3B82F6?style=flat-square&logo=googlechrome&logoColor=3B82F6&labelColor=000000" alt="Project Website">
   </a>
   <br>
-  <a href="#">
-    <img src="https://img.shields.io/badge/Contact-shanlins%40uci.edu-orange?style=flat-square&logo=gmail" alt="Contact">
+  <a href="mailto:shanlins@uci.edu">
+    <img src="https://img.shields.io/badge/Contact-shanlins%40uci.edu-FF9F1C?style=flat-square&logo=gmail&logoColor=FF9F1C&labelColor=000000" alt="Contact Email">
   </a>
 </p>
 
