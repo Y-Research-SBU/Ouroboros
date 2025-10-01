@@ -139,6 +139,12 @@ python x2rgb/inference.py \
 - `--irradiance_path`: Path to irradiance map
 - `--output_dir`: Output directory for generated RGB
 
+## 📧 Contact
+
+For questions, feedback, or collaboration opportunities, please contact:
+
+**Email**: [shanlins@uci.edu](mailto:shanlins@uci.edu), [chenyu.you@stonybrook.edu](mailto:chenyu.you@stonybrook.edu)
+
 ## Citation
 
 If you use this code in your research, please cite with:
