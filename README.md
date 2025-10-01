@@ -13,8 +13,8 @@
 
 <p>
   <a href="https://siwensun.github.io/">Shanlin Sun</a><sup>1 ★</sup>&nbsp;
-  <a href="https://yfwang.me/">Yifan Wang</a><sup>2</sup>&nbsp;
-  <a href="https://github.com/zhw123456789/">Hanwen Zhang</a><sup>3</sup>&nbsp;
+  <a href="https://yfwang.me/">Yifan Wang</a><sup>2 ★</sup>&nbsp;
+  <a href="https://github.com/zhw123456789/">Hanwen Zhang</a><sup>3 ★</sup>&nbsp;
   <a href="https://yuukino22.github.io/">Yifeng Xiong</a><sup>1</sup>&nbsp;
   <a href="https://scholar.google.com/citations?user=Tcg-9DcAAAAJ&hl=zh-CN">Qin Ren</a><sup>2</sup>&nbsp;
   <a href="https://lab-smile.github.io/">Ruogu Fang</a><sup>4</sup>&nbsp;
@@ -27,7 +27,7 @@
   <sup>2</sup> Stony Brook University &nbsp;&nbsp; 
   <sup>3</sup> Huazhong University of Science and Technology &nbsp;&nbsp; <br>
   <sup>4</sup> University of Florida &nbsp;&nbsp; 
-  <sup>★</sup> Contact Author <br>
+  <sup>★</sup> Equal Contribution <br>
 </p>
 
 <p align="center">
@@ -36,10 +36,6 @@
   </a>
   <a href="https://siwensun.github.io/ouroboros-project/">
     <img src="https://img.shields.io/badge/Project-Website-3B82F6?style=flat-square&logo=googlechrome&logoColor=3B82F6&labelColor=000000" alt="Project Website">
-  </a>
-  <br>
-  <a href="mailto:shanlins@uci.edu">
-    <img src="https://img.shields.io/badge/Contact-shanlins%40uci.edu-FF9F1C?style=flat-square&logo=gmail&logoColor=FF9F1C&labelColor=000000" alt="Contact Email">
   </a>
 </p>
 
