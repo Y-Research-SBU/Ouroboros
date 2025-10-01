@@ -35,13 +35,13 @@
     <img src="https://img.shields.io/badge/ArXiv-2508.14461-b31b1b?style=flat-square&logo=arxiv&labelColor=000000&logoColor=FFFFFF" alt="Paper">
   </a>
   <a href="https://siwensun.github.io/ouroboros-project/">
-    <img src="https://img.shields.io/badge/Project-Website-3B82F6?style=flat-square&logo=googlechrome&logoColor=3B82F6&labelColor=000000" alt="Project Website">
+    <img src="https://img.shields.io/badge/Project-Website-blue?style=flat-square&logo=googlechrome" alt="Project Website">
   </a>
   <a href="https://huggingface.co/Y-Research-Group/Ouroboros/tree/main">
     <img src="https://img.shields.io/badge/HuggingFace-Model-FF9A00?style=flat-square&logo=huggingface&labelColor=000000&logoColor=FF9A00" alt="HuggingFace Model">
   </a>
 </p>
-
+    
 </div>
 
 # Abstract
