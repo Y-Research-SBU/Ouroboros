@@ -37,6 +37,9 @@
   <a href="https://siwensun.github.io/ouroboros-project/">
     <img src="https://img.shields.io/badge/Project-Website-3B82F6?style=flat-square&logo=googlechrome&logoColor=3B82F6&labelColor=000000" alt="Project Website">
   </a>
+  <a href="https://huggingface.co/Y-Research-Group/Ouroboros/tree/main">
+    <img src="https://img.shields.io/badge/HuggingFace-Model-FF9A00?style=flat-square&logo=huggingface&labelColor=000000&logoColor=FF9A00" alt="HuggingFace Model">
+  </a>
 </p>
 
 </div>
@@ -161,4 +164,3 @@ If you use this code in your research, please cite with:
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
