@@ -60,6 +60,11 @@ While multi-step diffusion models have advanced both forward and inverse renderi
 - \[ ] Release training codes.
 - \[ ] Release training dataset.
 
+## Notes
+
+- We generate masks for windows, mirrors, and other highly specular regions for our datasets so these areas do not bias training; the same masks are applied during evaluation and will ship with the data release.
+- We are rebalancing checkpoints to better trade off cycle consistency and rendering quality across datasets; more checkpoints are coming soon.
+
 ## Installation
 
 ### Prerequisites
