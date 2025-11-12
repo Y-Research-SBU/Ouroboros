@@ -72,6 +72,7 @@ While multi-step diffusion models have advanced both forward and inverse renderi
 - Python 3.12
 - CUDA-compatible GPU 
 - Conda package manager
+- FFmpeg (for optional video export)
 
 ### Setup
 
@@ -121,6 +122,27 @@ python x2rgb/inference.py \
     --irradiance_path="path/to/irradiance.png" \
     --output_dir="path/to/output"
 ```
+
+### Video Inference (RGB sequence to material properties)
+
+Generate temporally consistent material property videos from an RGB frame sequence:
+
+```bash
+python video_inference.py \
+  --checkpoint_path "path/to/checkpoint" \
+  --input_dir "" \
+  --save_dir "" \
+  --num_frames 198 \
+  --window_size 32 \
+  --stride 16 \
+  --required_aovs albedo \
+  --device cuda \
+  --half_precision
+```
+
+Notes:
+- `input_dir` must contain sequentially numbered frames starting at `0.jpg`. 
+- The environment configuration for video inference should follow the YAML file located in the video_infer folder.
 
 ## Parameters
 
