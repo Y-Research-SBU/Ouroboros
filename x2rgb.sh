@@ -1,7 +1,7 @@
 #!/bin/bash
 
 python x2rgb/inference.py \
-    --checkpoint="Shanlin/Ouroboros" \
+    --checkpoint="Y-Research-Group/Ouroboros" \
     --modality "rgb" \
     --condition "normals" "albedo" "irradiance" "roughness" "metallicity" \
     --noise "gaussian" \

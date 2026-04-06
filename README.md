@@ -34,7 +34,7 @@
   <a href="https://arxiv.org/abs/2508.14461">
     <img src="https://img.shields.io/badge/ArXiv-2508.14461-b31b1b?style=flat-square&logo=arxiv&labelColor=000000&logoColor=FFFFFF" alt="Paper">
   </a>
-  <a href="https://siwensun.github.io/ouroboros-project/">
+  <a href="https://y-research-sbu.github.io/Ouroboros/">
     <img src="https://img.shields.io/badge/Project-Website-blue?style=flat-square&logo=googlechrome" alt="Project Website">
   </a>
   <a href="https://huggingface.co/Y-Research-Group/Ouroboros/tree/main">
@@ -91,6 +91,8 @@ conda activate ouroboros
 ## Project Page
 
 The official project page lives directly in `docs/`.
+
+Project URL: `https://y-research-sbu.github.io/Ouroboros/`
 
 - Page entry: `docs/index.html`
 - Static assets: `docs/static/`
