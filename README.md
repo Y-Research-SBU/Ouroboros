@@ -88,6 +88,21 @@ conda env create -f environment.yml
 conda activate ouroboros
 ```
 
+## Project Page
+
+The official project page lives directly in `docs/`.
+
+- Page entry: `docs/index.html`
+- Static assets: `docs/static/`
+
+There is no separate page source directory and no page build step. Edit files in `docs/` directly and publish GitHub Pages from that directory.
+
+For a local preview:
+
+```bash
+python3 -m http.server 8000 --directory docs
+```
+
 ## Usage
 
 ### RGB to Material Properties (rgb2x)

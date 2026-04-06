@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G56S7NBPZ0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-G56S7NBPZ0');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="description" content="Ouroboros: Single-step Diffusion Models for Cycle-consistent Forward and Inverse Rendering">
+  <meta name="keywords" content="Diffusion, Neural Rendering">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ouroboros: Single-step Diffusion Models for Cycle-consistent Forward and Inverse Rendering</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro|Titillium+Web:300,400,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/icon.png">
+  <link rel="preload" as="image" href="./static/images/teaser.jpg">
+
+  <script defer src="./static/js/index.js"></script>
+</head>
+<body class="project-page">
+
+<section class="publication-header">
+  <div class="container is-max-desktop">
+    <div class="paper-title">
+      <h1 class="title is-1 publication-title">Ouroboros: Single-step Diffusion Models for Cycle-consistent Forward and Inverse Rendering</h1>
+    </div>
+
+    <div id="authors">
+      <div class="author-row-new">
+        <a href="https://scholar.google.com/citations?user=c6wKvwgAAAAJ&hl=en">Shanlin Sun<sup>*</sup><sup>1</sup></a>,
+        <a href="https://yfwang.me/">Yifan Wang<sup>*</sup><sup>2</sup></a>,
+        <a href="https://github.com/zhw123456789/">Hanwen Zhang<sup>*</sup><sup>3</sup></a>,
+        <a href="https://yuukino22.github.io/">Yifeng Xiong<sup>1</sup></a>,
+        <a href="https://scholar.google.com/citations?user=Tcg-9DcAAAAJ&hl=zh-CN">Qin Ren<sup>2</sup></a>,
+        <a href="https://lab-smile.github.io/">Ruogu Fang<sup>†</sup><sup>4</sup></a>,
+        <a href="https://ics.uci.edu/~xhx/">Xiaohui Xie<sup>†</sup><sup>1</sup></a>,
+        <a href="https://chenyuyou.me/">Chenyu You<sup>†</sup><sup>2</sup></a>
+      </div>
+
+      <div class="affiliations-new">
+        <span><sup>1</sup>University of California, Irvine</span>&nbsp;&nbsp;&nbsp;
+        <span><sup>2</sup>Stony Brook University</span>&nbsp;&nbsp;&nbsp;
+        <span><sup>3</sup>Huazhong University of Science and Technology</span><br>
+        <span><sup>4</sup>University of Florida</span>
+      </div>
+
+      <div class="publication-links">
+        <a href="https://arxiv.org/pdf/2508.14461" class="paper-btn">
+          <span class="icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path fill="currentColor" d="M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm7 1.5V9h5.5" />
+              <path fill="currentColor" d="M8 17.5v-5h2.3c1.4 0 2.2.8 2.2 2s-.8 2-2.2 2H9.4v1ZM9.4 15h.7c.6 0 1-.3 1-.6s-.4-.6-1-.6h-.7Zm4.3 2.5v-5h1.9c1.8 0 3 1 3 2.5s-1.2 2.5-3 2.5Zm1.4-1.2h.4c1 0 1.6-.5 1.6-1.3s-.6-1.3-1.6-1.3h-.4Zm4.6 1.2v-5h3.2v1.2h-1.8v.8h1.7v1.2h-1.7v1.8Z"/>
+            </svg>
+          </span>
+          Paper
+        </a>
+        <a href="https://github.com/Y-Research-SBU/Ouroboros" class="github-btn">
+          <span class="icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path fill="currentColor" d="M12 .5A12 12 0 0 0 8.2 23.9c.6.1.8-.2.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.6-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.2 1.9 1.2 1.1 1.8 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6A4.7 4.7 0 0 1 5.6 8c-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1a4.7 4.7 0 0 1 1.2 3.3c0 4.6-2.8 5.6-5.5 6 .4.3.9 1 .9 2.1v3.1c0 .4.2.7.8.6A12 12 0 0 0 12 .5Z"/>
+            </svg>
+          </span>
+          Code
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="figure">
+      <picture>
+        <source srcset="./static/images/teaser.jpg" type="image/jpeg">
+        <img
+          src="./static/images/teaser.jpg"
+          alt="Teaser image."
+          width="8922"
+          height="3422"
+          fetchpriority="high"
+          decoding="async"
+        >
+      </picture>
+    </div>
+    <p class="caption">
+      <b>Single-step diffusion models for forward and inverse rendering in cycle consistency.</b>
+      Ouroboros decomposes RGB inputs into intrinsic maps and reconstructs images through a mutually reinforced inverse-and-forward rendering loop.
+      It also extends to temporally consistent video inverse rendering without dedicated finetuning.
+    </p>
+  </div>
+</section>
+
+<!-- <section class="section"> -->
+  <section class="section abstract-section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered">
+        <div class="column is-four-fifths section-copy">
+          <h2 class="title is-3">Abstract</h2>
+          <hr class="section-rule">
+          <div class="content has-text-justified">
+            <p>
+              While multi-step diffusion models have advanced both forward and inverse rendering, existing approaches often treat these problems independently, leading to cycle inconsistency and slow inference speed. 
+              In this work, we present <b>Ouroboros</b>, a framework composed of two single-step diffusion models that handle forward and inverse rendering with mutual reinforcement. 
+              Our approach extends intrinsic decomposition to both indoor and outdoor scenes and introduces a cycle consistency mechanism that ensures coherence between forward and inverse rendering outputs.
+              Experimental results demonstrate state-of-the-art performance across diverse scenes while achieving substantially faster inference speed compared to other diffusion-based methods.
+              We also demonstrate that Ouroboros can transfer to video decomposition in a training-free manner, reducing temporal inconsistency in video sequences while maintaining high-quality per-frame inverse rendering.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+      <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/SA5xADW2eJ0?si=xDg5Z3T9m9eJk3Ht"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/heWXQdIjSzs?si=QDc62aFZW8uLj-e3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+
+<section class="section framework-overview">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths section-copy section-copy--wide">
+        <h2 class="title is-3">Framework Overview</h2>
+        <hr class="section-rule">
+        <p class="framework-overview__intro">
+          The complete Ouroboros pipeline is organized around a cycle-consistent pair of single-step diffusion models,
+          with an additional training-free extension for temporally consistent video inverse rendering.
+        </p>
+      </div>
+    </div>
+
+    <div class="framework-grid">
+      <figure class="framework-figure">
+        <h3 class="framework-figure__title">Main Framework</h3>
+        <img
+          class="framework-figure__image"
+          src="./static/images/framework.jpg"
+          alt="Main Ouroboros framework overview"
+          loading="lazy"
+          decoding="async"
+        >
+        <figcaption class="framework-figure__caption">
+          Main framework. Ouroboros couples inverse rendering and forward rendering through a cycle-consistent pair of single-step diffusion models.
+        </figcaption>
+      </figure>
+
+      <figure class="framework-figure">
+        <h3 class="framework-figure__title">Video Inference Framework</h3>
+        <img
+          class="framework-figure__image framework-figure__image--narrow"
+          src="./static/images/video_inference_framework.jpg"
+          alt="Video inference framework overview"
+          loading="lazy"
+          decoding="async"
+        >
+        <figcaption class="framework-figure__caption">
+          Video inference framework. A training-free extension improves temporal consistency for video inverse rendering.
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section results-header">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths section-copy section-copy--wide">
+        <h2 class="title is-3">Results</h2>
+        <hr class="section-rule">
+        <p class="results-header__intro">
+          We evaluate Ouroboros on both forward rendering and inverse rendering across diverse indoor and outdoor scenes.
+          The visual comparisons below highlight two key observations: first, the cycle-consistent single-step design produces cleaner intrinsic estimates and more faithful reconstructions than RGB↔X in forward rendering; second, the inverse rendering model generalizes across scene types while preserving plausible albedo, normal, roughness, metallicity, and irradiance predictions.
+        </p>
+        <p class="results-header__intro">
+          Beyond per-image quality, Ouroboros also supports a training-free video extension that improves temporal consistency, which is reflected in the framework above and the stable appearance of the predicted intrinsic maps.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section forward-rendering">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths section-copy results-copy">
+        <h3 class="title is-4 subsection-title">Forward Rendering</h3>
+        <p class="subsection-description">
+          Given predicted intrinsic maps, Ouroboros synthesizes images that remain close to the original appearance while maintaining consistency with inverse rendering outputs.
+          Compared with RGB↔X, our method yields more coherent material attributes and more faithful reconstructions.
+        </p>
+      </div>
+    </div>
+    <div class="results-shell">
+      <div class="forward-carousel" role="group" aria-roledescription="carousel" aria-label="Forward rendering examples" tabindex="0">
+        <button class="forward-carousel__nav forward-carousel__nav--prev" aria-label="Previous example">
+          <span class="icon is-medium" aria-hidden="true">&#8249;</span>
+        </button>
+        <div class="forward-carousel__viewport">
+          <div class="forward-carousel__item is-active">
+            <figure class="image is-inline-block rendering-gif">
+              <img src="./static/gifs/forward_rendering/scene1.gif" alt="Forward rendering example - Scene 1" decoding="async">
+            </figure>
+          </div>
+          <div class="forward-carousel__item">
+            <figure class="image is-inline-block rendering-gif">
+              <img data-src="./static/gifs/forward_rendering/scene2.gif" alt="Forward rendering example - Scene 2" loading="lazy" decoding="async">
+            </figure>
+          </div>
+          <div class="forward-carousel__item">
+            <figure class="image is-inline-block rendering-gif">
+              <img data-src="./static/gifs/forward_rendering/scene3.gif" alt="Forward rendering example - Scene 3" loading="lazy" decoding="async">
+            </figure>
+          </div>
+        </div>
+        <button class="forward-carousel__nav forward-carousel__nav--next" aria-label="Next example">
+          <span class="icon is-medium" aria-hidden="true">&#8250;</span>
+        </button>
+        <div class="forward-carousel__pagination" role="tablist">
+          <button class="forward-carousel__dot is-active" aria-label="Go to scene 1" role="tab"></button>
+          <button class="forward-carousel__dot" aria-label="Go to scene 2" role="tab"></button>
+          <button class="forward-carousel__dot" aria-label="Go to scene 3" role="tab"></button>
+        </div>
+      </div>
+      <div class="forward-comparison">
+        <div class="forward-comparison__headings">
+          <span class="forward-comparison__heading-label">Method</span>
+          <span>RGB</span>
+          <span>Albedo</span>
+          <span>Normal</span>
+          <span>Roughness</span>
+          <span>Metallicity</span>
+          <span>Irradiance</span>
+          <span>Reconstruction</span>
+        </div>
+        <div class="forward-comparison__row">
+          <div class="forward-comparison__label">Ours</div>
+          <img data-src="./static/images/forward_compare/ours_rgb.jpg" alt="Ours RGB frame" loading="lazy" decoding="async">
+          <img data-src="./static/images/forward_compare/ours_albedo.png" alt="Ours Albedo" loading="lazy" decoding="async">
+          <img data-src="./static/images/forward_compare/ours_normal.png" alt="Ours Normal" loading="lazy" decoding="async">
+          <img data-src="./static/images/forward_compare/ours_roughness.png" alt="Ours Roughness" loading="lazy" decoding="async">
+          <img data-src="./static/images/forward_compare/ours_metallicity.png" alt="Ours Metallicity" loading="lazy" decoding="async">
+          <img data-src="./static/images/forward_compare/ours_irradiance.png" alt="Ours Irradiance" loading="lazy" decoding="async">
+          <img data-src="./static/images/forward_compare/ours_reconstruction.png" alt="Ours Reconstruction" loading="lazy" decoding="async">
+        </div>
+        <div class="forward-comparison__row">
+          <div class="forward-comparison__label">RGB↔X</div>
+          <img data-src="./static/images/forward_compare/rgbx_rgb.jpg" alt="RGB↔X RGB frame" loading="lazy" decoding="async">
+          <img data-src="./static/images/forward_compare/rgbx_albedo.png" alt="RGB↔X Albedo" loading="lazy" decoding="async">
+          <img data-src="./static/images/forward_compare/rgbx_normal.png" alt="RGB↔X Normal" loading="lazy" decoding="async">
+          <img data-src="./static/images/forward_compare/rgbx_roughness.png" alt="RGB↔X Roughness" loading="lazy" decoding="async">
+          <img data-src="./static/images/forward_compare/rgbx_metallicity.png" alt="RGB↔X Metallicity" loading="lazy" decoding="async">
+          <img data-src="./static/images/forward_compare/rgbx_irradiance.png" alt="RGB↔X Irradiance" loading="lazy" decoding="async">
+          <img data-src="./static/images/forward_compare/rgbx_reconstruction.png" alt="RGB↔X Reconstruction" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section inverse-rendering">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths section-copy results-copy">
+        <h3 class="title is-4 subsection-title">Inverse Rendering</h3>
+        <p class="subsection-description">
+          The inverse rendering results show robust decomposition across both indoor and outdoor scenes.
+          The predicted albedo, normal, roughness, metallicity, and irradiance maps remain structurally consistent across diverse inputs.
+        </p>
+      </div>
+    </div>
+    <div class="results-shell">
+      <div class="inverse-grid mt-5">
+        <div class="inverse-grid__headings">
+          <span>RGB</span>
+          <span>Albedo</span>
+          <span>Normal</span>
+          <span>Roughness</span>
+          <span>Metallicity</span>
+          <span>Irradiance</span>
+        </div>
+
+        <div class="inverse-grid__row">
+          <figure class="inverse-grid__cell">
+            <img data-src="./static/images/inverse_rendering/test2_rgb.jpg" alt="Inverse rendering example test2 - RGB" loading="lazy" decoding="async">
+          </figure>
+        <figure class="inverse-grid__cell">
+          <img data-src="./static/images/inverse_rendering/test2_albedo.png" alt="Inverse rendering example test2 - Albedo" loading="lazy" decoding="async">
+        </figure>
+        <figure class="inverse-grid__cell">
+          <img data-src="./static/images/inverse_rendering/test2_normal.png" alt="Inverse rendering example test2 - Normal" loading="lazy" decoding="async">
+        </figure>
+        <figure class="inverse-grid__cell">
+          <img data-src="./static/images/inverse_rendering/test2_roughness.png" alt="Inverse rendering example test2 - Roughness" loading="lazy" decoding="async">
+        </figure>
+        <figure class="inverse-grid__cell">
+          <img data-src="./static/images/inverse_rendering/test2_metallicity.png" alt="Inverse rendering example test2 - Metallicity" loading="lazy" decoding="async">
+        </figure>
+        <figure class="inverse-grid__cell">
+          <img data-src="./static/images/inverse_rendering/test2_irradiance.png" alt="Inverse rendering example test2 - Irradiance" loading="lazy" decoding="async">
+        </figure>
+        </div>
+
+        <div class="inverse-grid__row">
+          <figure class="inverse-grid__cell">
+            <img data-src="./static/images/inverse_rendering/test5_rgb.jpg" alt="Inverse rendering example test5 - RGB" loading="lazy" decoding="async">
+          </figure>
+        <figure class="inverse-grid__cell">
+          <img data-src="./static/images/inverse_rendering/test5_albedo.png" alt="Inverse rendering example test5 - Albedo" loading="lazy" decoding="async">
+        </figure>
+        <figure class="inverse-grid__cell">
+          <img data-src="./static/images/inverse_rendering/test5_normal.png" alt="Inverse rendering example test5 - Normal" loading="lazy" decoding="async">
+        </figure>
+        <figure class="inverse-grid__cell">
+          <img data-src="./static/images/inverse_rendering/test5_roughness.png" alt="Inverse rendering example test5 - Roughness" loading="lazy" decoding="async">
+        </figure>
+        <figure class="inverse-grid__cell">
+          <img data-src="./static/images/inverse_rendering/test5_metallicity.png" alt="Inverse rendering example test5 - Metallicity" loading="lazy" decoding="async">
+        </figure>
+        <figure class="inverse-grid__cell">
+          <img data-src="./static/images/inverse_rendering/test5_irradiance.png" alt="Inverse rendering example test5 - Irradiance" loading="lazy" decoding="async">
+        </figure>
+        </div>
+
+        <div class="inverse-grid__row">
+          <figure class="inverse-grid__cell">
+            <img data-src="./static/images/inverse_rendering/test7_rgb.jpg" alt="Inverse rendering example test7 - RGB" loading="lazy" decoding="async">
+          </figure>
+        <figure class="inverse-grid__cell">
+          <img data-src="./static/images/inverse_rendering/test7_albedo.png" alt="Inverse rendering example test7 - Albedo" loading="lazy" decoding="async">
+        </figure>
+        <figure class="inverse-grid__cell">
+          <img data-src="./static/images/inverse_rendering/test7_normal.png" alt="Inverse rendering example test7 - Normal" loading="lazy" decoding="async">
+        </figure>
+        <figure class="inverse-grid__cell">
+          <img data-src="./static/images/inverse_rendering/test7_roughness.png" alt="Inverse rendering example test7 - Roughness" loading="lazy" decoding="async">
+        </figure>
+        <figure class="inverse-grid__cell">
+          <img data-src="./static/images/inverse_rendering/test7_metallicity.png" alt="Inverse rendering example test7 - Metallicity" loading="lazy" decoding="async">
+        </figure>
+        <figure class="inverse-grid__cell">
+          <img data-src="./static/images/inverse_rendering/test7_irradiance.png" alt="Inverse rendering example test7 - Irradiance" loading="lazy" decoding="async">
+        </figure>
+        </div>
+
+        <div class="inverse-grid__row">
+          <figure class="inverse-grid__cell">
+            <img data-src="./static/images/inverse_rendering/matrixcity_test5_rgb.jpg" alt="Inverse rendering example MatrixCity test5 - RGB" loading="lazy" decoding="async">
+          </figure>
+        <figure class="inverse-grid__cell">
+          <img data-src="./static/images/inverse_rendering/matrixcity_test5_albedo.png" alt="Inverse rendering example MatrixCity test5 - Albedo" loading="lazy" decoding="async">
+        </figure>
+        <figure class="inverse-grid__cell">
+          <img data-src="./static/images/inverse_rendering/matrixcity_test5_normal.png" alt="Inverse rendering example MatrixCity test5 - Normal" loading="lazy" decoding="async">
+        </figure>
+        <figure class="inverse-grid__cell">
+          <img data-src="./static/images/inverse_rendering/matrixcity_test5_roughness.png" alt="Inverse rendering example MatrixCity test5 - Roughness" loading="lazy" decoding="async">
+        </figure>
+        <figure class="inverse-grid__cell">
+          <img data-src="./static/images/inverse_rendering/matrixcity_test5_metallicity.png" alt="Inverse rendering example MatrixCity test5 - Metallicity" loading="lazy" decoding="async">
+        </figure>
+        <figure class="inverse-grid__cell">
+          <img data-src="./static/images/inverse_rendering/matrixcity_test5_irradiance.png" alt="Inverse rendering example MatrixCity test5 - Irradiance" loading="lazy" decoding="async">
+        </figure>
+        </div>
+
+        <div class="inverse-grid__row">
+          <figure class="inverse-grid__cell">
+            <img data-src="./static/images/inverse_rendering/matrixcity_test7_rgb.jpg" alt="Inverse rendering example MatrixCity test7 - RGB" loading="lazy" decoding="async">
+          </figure>
+        <figure class="inverse-grid__cell">
+          <img data-src="./static/images/inverse_rendering/matrixcity_test7_albedo.png" alt="Inverse rendering example MatrixCity test7 - Albedo" loading="lazy" decoding="async">
+        </figure>
+        <figure class="inverse-grid__cell">
+          <img data-src="./static/images/inverse_rendering/matrixcity_test7_normal.png" alt="Inverse rendering example MatrixCity test7 - Normal" loading="lazy" decoding="async">
+        </figure>
+        <figure class="inverse-grid__cell">
+          <img data-src="./static/images/inverse_rendering/matrixcity_test7_roughness.png" alt="Inverse rendering example MatrixCity test7 - Roughness" loading="lazy" decoding="async">
+        </figure>
+        <figure class="inverse-grid__cell">
+          <img data-src="./static/images/inverse_rendering/matrixcity_test7_metallicity.png" alt="Inverse rendering example MatrixCity test7 - Metallicity" loading="lazy" decoding="async">
+        </figure>
+        <figure class="inverse-grid__cell">
+          <img data-src="./static/images/inverse_rendering/matrixcity_test7_irradiance.png" alt="Inverse rendering example MatrixCity test7 - Irradiance" loading="lazy" decoding="async">
+        </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bibtex">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths section-copy">
+        <h2 class="title is-3">BibTeX</h2>
+        <hr class="section-rule">
+        <pre class="has-text-left"><code>@article{sun2025ouroboros,
+  title={Ouroboros: Single-step Diffusion Models for Cycle-consistent Forward and Inverse Rendering},
+  author={Sun, Shanlin and Wang, Yifan and Zhang, Hanwen and Xiong, Yifeng and Ren, Qin and Fang, Ruogu and Xie, Xiaohui and You, Chenyu},
+  journal={arXiv preprint arXiv:2508.14461},
+  year={2025}
+}</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section contact-info">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths section-copy">
+        <h2 class="title is-3">Contact</h2>
+        <hr class="section-rule">
+        <p>For questions, feedback, or collaboration opportunities, please contact:<br>Email: <a href="mailto:shanlins@uci.edu">shanlins@uci.edu</a>, <a href="mailto:chenyu.you@stonybrook.edu">chenyu.you@stonybrook.edu</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
