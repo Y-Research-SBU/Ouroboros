@@ -104,10 +104,17 @@ a:hover {
 .publication-title {
   font-family: 'Titillium Web', 'Google Sans', sans-serif;
   font-size: 42px;
-  font-weight: 500;
+  font-weight: 300;
   line-height: 1.15em;
   margin-bottom: 1rem !important;
   text-align: center;
+}
+
+.publication-title-highlight {
+  color: #166534;
+  display: inline-block;
+  font-family: 'Google Sans', 'Titillium Web', sans-serif;
+  font-weight: 700;
 }
 
 .publication-venue {
