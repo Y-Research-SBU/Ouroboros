@@ -32,13 +32,13 @@
 
 <p align="center">
   <a href="https://arxiv.org/abs/2508.14461">
-    <img src="https://img.shields.io/badge/ArXiv-2508.14461-b31b1b?style=flat-square&logo=arxiv&labelColor=000000&logoColor=FFFFFF" alt="Paper">
+    <img src="https://img.shields.io/badge/ArXiv-2508.14461-B31B1B?style=flat-square&logo=arxiv" alt="arXiv"
   </a>
   <a href="https://y-research-sbu.github.io/Ouroboros/">
-    <img src="https://img.shields.io/badge/Project-Website-blue?style=flat-square&logo=googlechrome" alt="Project Website">
+    <img src="https://img.shields.io/badge/Project-Website-4285F4?style=flat-square&logo=googlechrome" alt="Project Page">
   </a>
   <a href="https://huggingface.co/Y-Research-Group/Ouroboros/tree/main">
-    <img src="https://img.shields.io/badge/HuggingFace-Model-FF9A00?style=flat-square&logo=huggingface&labelColor=000000&logoColor=FF9A00" alt="HuggingFace Model">
+    <img src="https://img.shields.io/badge/HuggingFace-Model-F9A825?style=flat-square&logo=huggingface" alt="Hugging Face">
   </a>
 </p>
     
